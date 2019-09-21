@@ -10,6 +10,6 @@ _This is the result of me trying to somehow grasp all-in-one and make a cheatshe
 
 _This is in no way an attempt to explain OOP, nor make a complete reference of OOP in JavaScript; rather, if you read this, it is expected that you are deeply familiar with all concepts of OOP, and know few languages where it is implemented differently. If so, this article will be of interest and of use for you, and will be both a fun read, and will make you think._
 
-Let's get started.
+So let's get started.
 
 ### 1.
