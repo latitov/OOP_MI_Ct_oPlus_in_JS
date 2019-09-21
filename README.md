@@ -8,6 +8,6 @@ _This is the result of me trying to somehow grasp all-in-one and make a cheatshe
 
 _Though written in context of the JavaScript, this might also be of particular interest in general, no matter what language you use._
 
-So, let's get started.
+Let's get started.
 
 ### 1.
