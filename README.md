@@ -425,7 +425,7 @@ calls those two:
 ```
 
 `.call()` is an existing JS syntax, btw. Unfortunately we can't just call `Car.show.call()`, because Car is a class, i.e. it doesn't
-exist, that why we call it `Car.prototype.show.call`.... At least in JS all these manipulations _are_ possible!
+exist, that's why we call it `Car.prototype.show.call`.... At least in JS all these manipulations _are_ possible!
 
 
 #### How to implement it in existing JavaScript
