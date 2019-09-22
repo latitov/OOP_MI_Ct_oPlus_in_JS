@@ -443,7 +443,7 @@ we would write:
 	specialize_with(this, new C(args));
 ```
 
-And that's it. Here's how the complete MI code may look then in existing JS:
+And that's it. Here's how the complete MI code may look like then in existing JS:
 
 ```
 	class Car {
@@ -494,17 +494,28 @@ And here's the code for specialize_with() utility function:
 	}
 ```
 
+As short as that. Just 5 LOC. Can even be made one-liner:
+
+```
+function specialize_with(o, S) { for (var prop in S) { o[prop] = S[prop]; } }
+```
+
+That's the effort to implement MI in JavaScript. Not much of code, more of a know-how.
+
 _Note. This is not the most efficient way to do things, because temporary objects are created and discarded.
-But that's why we need language support, to do things both conveniently and in most efficient way.__
+But that's why we need language support, to do things both conveniently and in most efficient way._
 
 ## Part 3. But wait, there is more use to it!
 
 
 It's fundamental. As a said previously, an OOP abstraction encompasses almost every aspect of reality,
-doesn't matter like it or not, doesn't matter if you use this terminology or not.
+doesn't matter if you like it or not, doesn't matter if you use this terminology or not.
 
-For example, these are cascade style sheets, CSS. And there are configuration profiles. It's the same,
-let's see an example:
+For example, there are cascade style sheets, CSS.
+
+And there are configuration profiles.
+
+It's the same, let's see an example:
 
 ```
 	var servlet_profile = {
