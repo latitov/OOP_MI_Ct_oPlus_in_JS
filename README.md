@@ -175,7 +175,7 @@ a lot of people don't understan it properly, and another lot of people misuse it
 programware behemoths. But both the concepts of Object and of MI are natural.
 
 The programs we create, are working with concepts of our own universe, the reality of ours, and it's full of things, of Objects.
-The computers are well suited to represent some data, __and__ to do some work (execute the code, the programs) on that data.
+The computers are well suited to represent some data, _and_ to do some work (execute the code, the programs) on that data.
 Nothing new, it's the very foundation of computing. The data in computer represent some phenomenae in real world, the Objects,
 and the code is used to do something with that data, do actions. It doesn't matter if you use OOP-enabled language or not, maybe
 you are still using punch-cards or assembler, in any case you work with data that represents real world phenomenae, and thus
@@ -196,11 +196,11 @@ in one form, or another.
 
 Now, the MI. Just as objects in programs are natural, the MI is natural as well. Let's consider an example, the bottle of water.
 This object is simultaneously a water (it has all properties of water, and you can drink it, and do anything else you can
-do with water), __and__ it is a bottle (it has all properties of bottle, and you can break it, or recycle, etc.). What is inheritance, anyway?
+do with water), _and_ it is a bottle (it has all properties of bottle, and you can break it, or recycle, etc.). What is inheritance, anyway?
 It's very simple thing. It's when you define a liuqid, and then a juice, which _inherits_ all data and code from liuqid, and
 modifies some, and then you can also descend a milk, an oil, a beer... As simple as that. Now you have Packaging, from which
 you can descend boxes, wrap paper, containers, and - bottles. And now you have a bottle of water, how are you supposed
-to resresent such an object? Wouldn't it be _natural_ to just descend it both from a Bottle, and a Water?
+to represent such an object? Wouldn't it be _natural_ to just descend it both from a Bottle, and a Water? Yes of course it would.
 
 At this point, people savvy with OOP will complain, _"it's not that simple"_. Come on guys, it's just that, it's _that_ simple.
 The fact that some can't figure out how to implememnt it properly, it's, to make an analogy, isn't the problem with trees,
