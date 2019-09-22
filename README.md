@@ -309,13 +309,13 @@ We can start with Asset instead, and extend it with Car.
 
 So, what does "extend A with B" mean (or equivalently, "B extends/inherits A)"? It means this:
 "for all properties of B, write them over to A". That's it. If there was something missing in B, which
-exists in A, it'll be left as is; in all conflicts, Bs properties will overwrite A's properties. As simple
+exists in A, it'll be left as is; in all conflicts, B's properties will overwrite A's properties. As simple
 as that.
 
 Another good word to describe this, is "specialize with", or "specializes". For example, if there is an Animal,
-then we can created Elephant which _specializes_ Animal, or "specialize Animal with Elephant". I like
-"specialize" more than "extend", because the logic that happens there, "for all properties of B, write
-them over to A", it's exactly an extension, because properties get overwritten.
+then we can create Elephant which _specializes_ Animal, or say _specialize Animal with Elephant_. I like
+"specialize" more than "extend", because the logic that happens there, __"for all properties of B, write
+them over to A"__, it's __not__ exactly an extension, because properties get overwritten.
 
 Let's get back to JavaScript. Currently in  JavaScript we use "super" keyword to call parent's constructor,
 that's the syntax. And, this syntax _is ambiguous_. Because, by all common sense, we should first
