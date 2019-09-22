@@ -247,7 +247,7 @@ Perl and Python, ban MI.
 ### MI, Diamond Problem: The Solution
 
 The problem with MI that gets everyone stuck in the mud, is the question of what descends and what gets masked,
-in case parens have conflicting properties.  The solution, in fact, _is very simple_: just make the priority explicit.
+in case parents have conflicting properties.  The solution, in fact, _is very simple_: just make the priority explicit.
 
 Keeping the priority ambiguous, is the foundation of all problems. Once it is made explicit, then the programmer can
 decide what has priority over what, and all the questions just disappear.
