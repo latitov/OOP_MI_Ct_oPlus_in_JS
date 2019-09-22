@@ -53,7 +53,7 @@ and also to this:
 	person.age = 50;
 	person.eyeColor = "blue";
 ```
-#### 2. Define an object constructor, and then create objects of the constructed type, with the keyword new.
+#### 2. Define an object constructor, and then create objects of the constructed type, with the keyword `new`.
 
 ```
 	// Constructor function for Person objects
@@ -89,7 +89,7 @@ some ambiguity.
 
 ES6, also known as ECMAScript2015, introduced classes. A class is a type of function,
 but instead of using the keyword function to initiate it, we use the keyword class,
-and the properties is assigned inside a constructor() method.
+and the properties are assigned inside a constructor() method.
 
 ```
 	class Car {
