@@ -591,10 +591,10 @@ Note, that I defined only those that changed. Now, I can get my specialized inst
 That's it.
 
 In case of CSS in HTML, the same thing happens. There is a style (S1) attached to element with style="" property,
-then there is class styles (S2), and global tag styles (S3). Roughly, the style of an element would be:
+then there is class style (S2), and global tag style (S3). Roughly, the style of an element would be:
 
 ```
-	S0 = default_style;
+	S0 = copy_of( default_style );
 	specialize_with(S0, S1);
 	specialize_with(S0, S2);
 	specialize_with(S0, S3);
@@ -602,7 +602,9 @@ then there is class styles (S2), and global tag styles (S3). Roughly, the style 
 
 Now S0 is the actual style.
 
-__Note: if you need a deep_copy() of JS structures, look at https://github.com/latitov/JS_DeepCopy __.
+## P.S.
+
+If you need a deep_copy() of JS structures, look at https://github.com/latitov/JS_DeepCopy.
 
 <hr>
 
