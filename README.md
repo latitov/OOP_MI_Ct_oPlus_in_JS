@@ -331,7 +331,7 @@ create a base object, and then specialize it (add own properties). But we can wr
 	}
 ```
 
-And what will happen then? __I don't know__. Because we first created own property, and then called parent's
+And what will happen then? __I don't know__. Because we first created our own property, and then called parent's
 constructor... And if JS somehow would force calling a constructor first, then why the hell it's needed to be typed explicitly
 at all, if there's already "extends Car" in the beginning? And, if we call parent's constructor explicitly, then why write
 "extends Car"? I don't know. It's a mess. I hope that in ECMA standard it is all explained, but still, it's a mess.
@@ -359,7 +359,7 @@ Now, how it _could_ have been impelemented syntactically? Let's look at a list w
 ```
 
 In this case, Car and Asset constructors are called implicitly, right before the line L1. But, here we have a problem:
-what arguments should go to where? Let's rewrite it this way then:
+what arguments should go to what? Let's re-write it this way then:
 
 ```
 	class Model_i1(usefulness) extends Car(brand), Asset(price) {
@@ -373,9 +373,9 @@ what arguments should go to where? Let's rewrite it this way then:
 	mycar = new Model_i1(16, "Ford Mustang", "$100K");
 ```
 
-Now, the compiler can figure out what should go where, and in the aggregated constructor we specify arguments
+Now, the compiler can figure out what should go where, and in the aggregated constructor call we specify arguments
 in the order as they go in the class declaration, left to right: usefulness, brand, price. Also, the constructor() function
-to have arhuments specified would be redundant.
+doesn't need to have arguments specified, as that would be redundant.
 
 #### Possible syntax to express this, #2:
 
