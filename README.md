@@ -203,9 +203,9 @@ you can descend boxes, wrap paper, containers, and - bottles. And now you have a
 to represent such an object? Wouldn't it be _natural_ to just descend it both from a Bottle, and a Water? Yes of course it would.
 
 At this point, people savvy with OOP will complain, _"it's not that simple"_. Come on guys, it's just that, it's _that_ simple.
-The fact that some can't figure out how to implememnt it properly, it's, to make an analogy, isn't the problem with trees,
-but with you, you can get lost in a wood of three pines. The implementation problem of MI comes from details, particularly
-from a questions of what to do if multiple parents of an object has conflicting parts. For example, what to do, if both
+The fact that some can't figure out how to implement it properly, it's, to make an analogy, isn't the problem with trees,
+but with you, if you can manage to get lost in a wood of just three pines. The implementation problem of MI comes from details, particularly
+from a questions of what exactly should be done if multiple parents of an object has conflicting parts. For example, what to do, if both
 Bottle has a "price", and a water in it also has a "price". Well, in this particular case a composition might be a solution,
 i.e. to make an all new object, which _contains_ both a bottle and a water, and price can be obtained as the sum of both.
 But, it this case, we lose the main benefit of MI - for example we can't put this objects into an array with other bottles,
