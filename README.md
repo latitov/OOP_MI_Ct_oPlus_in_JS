@@ -1,6 +1,8 @@
 # OOP_MI_Ct_oPlus_in_JS
 
-### OOP, Multiple Inheritance, and Cascade thing, and o+ operator in JavaScript. By Leonid Titov, 2019
+### OOP, Multiple Inheritance, and Cascade thing, and o+ operator in JavaScript.
+
+By Leonid Titov, 2019
 
 _This article contains a solution of how to achieve MI in JS_.
 
