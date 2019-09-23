@@ -4,7 +4,8 @@
 
 By Leonid Titov, 2019
 
-_This article contains a solution of how to achieve MI in JS_.
+_This article contains a solution of how to achieve MI in JS. It also contains a lot of critics of how JS is designed, an analysis,
+and unlikely-to-be-ever-implemented proposals how it could have been made better._
 
 _Though written in context of the JavaScript, this might also be of particular interest in general, no matter what language you use._
 
@@ -136,8 +137,41 @@ Now, the question is, HOW THIS IS DIFFERENT FROM THE PREVIOUS SYNTAX?
 	
 	It's questionable feature, which allows to mix object prototype (class)
 	with package tools, into a single variable-namespace.
-		
-3. Inheritance, not multiple, but single inheritance, is possible with "extends" keyword:
+
+3. A class has `.prototype`.
+
+	Another self-contradictory syntax of JavaScript.
+	
+	I'll explain. As I showed above, a class is basically
+	a syntax wrapper for a function, a function which constructs and returns an object for us to use, an instance.
+	Below I will provide an example where we want to call a method of another class, _explicitly_ passing an object to it,
+	(calling a method from another class on this particular object), and JS provides standard syntax for that, `.call()`.
+	So far so good. But to use it, we need to point a method somehow, and if it is defined anonymously in a
+	function-constructor, then there's no way to do so. _That's why_ JS designer invented `.prototype`, to solve this,
+	and somehow access all properties of "prototype of an object", which doesn't exist actually yet.
+	
+	Here are both a semantic ambiguity, _and_ a logic contradiction.
+	
+	Let's start with ambiguity: suppose that we
+	accessed and modified a prototype, of which there are already some instances were created and exist. Should it affect them,
+	or not? Maybe it should only affect new object, created _after_ the modification? Hope that ECMA standard clarifies this,
+	but it's __slippery__.
+	
+	Now the logic contradiction. Look, there are fundamentally two ways to represent classes: create and keep them as
+	a real objects (instances), which are _just used as_ prototypes, and clone them whenever we need another copy (instance);
+	or classes are purely virtual, i.e. don't exist as objects, and whenever you want to instantiate it, a new object is created,
+	using a class as a description of _how_ to create it. That's how C++ works, and it consumes less memory, as there's
+	no need to keep prototypes as actual objects in memory. However, first way is more powerful. __Now__, classes in JS
+	try to represent virtual classes, like C++ way. It naturally makes it impossible to modify a prototype, and a need for
+	"static" functions (just like in C++ or Java) arises. __But then JS designers introduce prototypes!__ The prototype
+	_is_ a real object in terms of memory consumtion, and so invalidates all the benefits of keeping a class virtual.
+	__But then, the class scope itself could have been made a prototype__, i.e. a real actual object. Then there would be no
+	need to access it's methods from a class directly via .prototype, and there would be no need for static functions, as they
+	all will be equal, the same functions can be either called as static functions of a class, or methods of an instance.
+	__The `.prototype` construct in JavaScript is totally redundant concept.`
+	
+
+4. Inheritance, not multiple, but single inheritance, is possible with "extends" keyword:
 
 	```
 		class Car {
@@ -425,7 +459,7 @@ calls those two:
 ```
 
 `.call()` is an existing JS syntax, btw. Unfortunately we can't just call `Car.show.call()`, because Car is a class, i.e. it doesn't
-exist, that's why we call it `Car.prototype.show.call`.... At least in JS all these manipulations _are_ possible!
+exist, that's why we call it `Car.prototype.show.call`.... See above about this contradictory syntax. But at least in JS all these manipulations _are_ possible!
 
 
 #### How to implement it in existing JavaScript
