@@ -629,12 +629,11 @@ then there is class style (S2), and global tag style (S3). Roughly, the style of
 
 ```
 	S0 = copy_of( default_style );
-	specialize_with(S0, S1);
-	specialize_with(S0, S2);
 	specialize_with(S0, S3);
+	specialize_with(S0, S2);
+	specialize_with(S0, S1);
+	// now S0 is the actual style.
 ```
-
-Now S0 is the actual style.
 
 ## P.S.
 
