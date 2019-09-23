@@ -154,21 +154,21 @@ Now, the question is, HOW THIS IS DIFFERENT FROM THE PREVIOUS SYNTAX?
 	
 	Let's start with ambiguity: suppose that we
 	accessed and modified a prototype, of which there are already some instances were created and exist. Should it affect them,
-	or not? Maybe it should only affect new object, created _after_ the modification? Hope that ECMA standard clarifies this,
-	but it's __slippery__.
+	or not? Maybe it should only affect new objects, created _after_ the modification? Hope that ECMA standard clarifies this,
+	but it's slippery...
 	
 	Now the logic contradiction. Look, there are fundamentally two ways to represent classes: create and keep them as
 	a real objects (instances), which are _just used as_ prototypes, and clone them whenever we need another copy (instance);
 	or classes are purely virtual, i.e. don't exist as objects, and whenever you want to instantiate it, a new object is created,
 	using a class as a description of _how_ to create it. That's how C++ works, and it consumes less memory, as there's
-	no need to keep prototypes as actual objects in memory. However, first way is more powerful. __Now__, classes in JS
-	try to represent virtual classes, like C++ way. It naturally makes it impossible to modify a prototype, and a need for
-	"static" functions (just like in C++ or Java) arises. __But then JS designers introduce prototypes!__ The prototype
+	no need to keep prototypes as actual objects in memory. However, first way is more powerful. Now, classes in JS
+	try to represent virtual classes, the C++ way. This naturally makes it impossible to modify a prototype, and a need for
+	"static" functions (just like in C++ or Java) arises. __But then, JS designers introduced prototypes!__ The prototype
 	_is_ a real object in terms of memory consumtion, and so invalidates all the benefits of keeping a class virtual.
 	__But then, the class scope itself could have been made a prototype__, i.e. a real actual object. Then there would be no
 	need to access it's methods from a class directly via .prototype, and there would be no need for static functions, as they
 	all will be equal, the same functions can be either called as static functions of a class, or methods of an instance.
-	__The `.prototype` construct in JavaScript is totally redundant concept.`
+	__Thus, the `.prototype` construct in JavaScript is totally redundant and logically self-contradictory concept.__
 	
 
 4. Inheritance, not multiple, but single inheritance, is possible with "extends" keyword:
