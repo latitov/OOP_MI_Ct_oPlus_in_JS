@@ -4,7 +4,7 @@
 
 By Leonid Titov, 2019
 
-_This article contains a solution of how to achieve MI in JS. It also contains a lot of critics of how JS is designed, an analysis,
+_This article contains a solution of how to achieve MI in existing JS, easily. It also contains a lot of critics of how JS is designed, an analysis,
 and unlikely-to-be-ever-implemented proposals how it could have been made better._
 
 _Though written in context of the JavaScript, this might also be of particular interest in general, no matter what language you use._
