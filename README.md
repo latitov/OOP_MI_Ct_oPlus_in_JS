@@ -147,7 +147,7 @@ Now, the question is, HOW THIS IS DIFFERENT FROM THE PREVIOUS SYNTAX?
 	Below I will provide an example where we want to call a method of another class, _explicitly_ passing an object to it,
 	(calling a method from another class on this particular object), and JS provides standard syntax for that, `.call()`.
 	So far so good. But to use it, we need to point a method somehow, and if it is defined anonymously in a
-	function-constructor, then there's no way to do so. _That's why_ JS designer invented `.prototype`, to solve this,
+	function-constructor, then there's no way to do so. _That's why_ JS designers invented `.prototype`, to solve this,
 	and somehow access all properties of "prototype of an object", which doesn't exist actually yet.
 	
 	Here are both a semantic ambiguity, _and_ a logic contradiction.
