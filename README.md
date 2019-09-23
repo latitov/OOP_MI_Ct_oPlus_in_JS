@@ -639,6 +639,8 @@ then there is class style (S2), and global tag style (S3). Roughly, the style of
 
 If you need a deep_copy() of JS structures, look at https://github.com/latitov/JS_DeepCopy.
 
+This http://www.crockford.com/javascript/inheritance.html is also very interesting. Who said that JavaScript isn't MI-enabled? And there's also a Swiss Inheritance!
+
 <hr>
 
 _Written by Leonid Titov, 2019-09-22_
